@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>On Leave Intent Exemple Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+
+<body>
+  <script src="on-leave-intent.min.js"></script>
+  <script>
+    function dontLeaveMe() {
+      alert("Don't Leave me")
+      console.log('Saiu...')
+    }
+
+    const onLeaveIntent = new OnLeaveIntent(dontLeaveMe, 3000)
+
+  </script>
+
+  <h1>Wait 3s to leave</h1>
+
+</body>
+
+</html>
