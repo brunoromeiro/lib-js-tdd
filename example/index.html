@@ -1,25 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt_br">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>On Leave Intent Exemple Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  </head>
 
-  <body>
-    <script src="on-leave-intent.min.js"></script>
-    <script>
-      function dontLeaveMe() {
-        alert("Don't Leave me")
-        console.log('Saiu...')
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>On Leave Intent Exemple Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
 
-      const onLeaveIntent = new OnLeaveIntent(dontLeaveMe, 3000)
-    </script>
+<body>
+  <script src="../lib/on-leave-intent.min.js"></script>
+  <script>
+    function dontLeaveMe() {
+      alert("Don't Leave me")
+      console.log('Saiu...')
+    }
 
-    <h1>Espere 3 segundos para sair da página</h1>
-    <p>Espere...</p>
-  </body>
+    const onLeaveIntent = new OnLeaveIntent(dontLeaveMe, 3000)
+
+
+    // async function getPokemons() {
+    //   try {
+    //     const response = await fetch('https://pokeapi.co/api/v2/pokemon')
+    //     const data = await response.json()
+
+    //     let res = data.results
+    //     return res.map(item => {
+    //       console.log(item.name)
+    //     })
+
+    //   } catch (err) {
+    //     console.error('Noooooooooo, we got an error!', err);
+    //   }
+    // }
+
+    // getPokemons()
+
+    // async function getUsers(users) {
+    //   const promises = users.map(user => fetch(`https://api.github.com/users/${user}`).then(r => r.json()))
+
+    //   fetch('https://api.github.com/users/brunoromeiro').then(r => r.json())
+
+    //   const people = await Promise.all(promises)
+    //   console.log(people.map(p => p.name))
+    // }
+
+    // getUsers(['brunoromeiro', 'dulcetti', 'willianjusten'])
+
+
+
+    //String.prototype.padStart/padEnd
+    //.padEnd(tamanhoDesejado, textoParaAdicionar)
+    //.padStart(tamanhoDesejado, textoParaAdicionar)
+    // console.log('1'.padStart(11, '0'))
+    // console.log('1'.padEnd(11, '0'))
+
+    // //old
+    // console.log(Math.pow(2, 3))
+    // //new
+    // console.log(2 ** 3)
+
+    // //old use
+    // const arr = [1, 2, 3]
+    // console.log(arr.indexOf(3) > -1)
+
+    // //new use
+    // console.log(arr.includes(3))
+    // console.log(arr.includes(5))
+
+
+    const animals = {
+      camel: 3,
+      llama: 2,
+      alpaca: 5
+    }
+    // // Object.entries
+    // const animalsMap = new Map(Object.entries(animals))
+
+    // console.log(animalsMap.size)
+    // console.log(animalsMap.has('llama'))
+    // console.log(animalsMap.has('lion'))
+    // console.log(animalsMap.get('alpaca'))
+
+    // // Object.values
+    // console.log(Object.values(animals).reduce((a, b) => a + b))
+
+
+    // // Trailing Commas
+    // const arr = [
+    //   1,
+    //   2,
+    //   3,
+    // ];
+
+    // const obj = {
+    //   name: 'Bruno',
+    //   age: 35,
+    //   country: 'Brazil'
+    // }
+
+    // function sum(a, b, ) {
+    //   return a + b
+    // }
+
+  </script>
+
+  <h1>Espere 3 segundos para sair da página</h1>
+  <p>Espere...</p>
+</body>
+
 </html>
