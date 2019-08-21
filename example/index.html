@@ -37,16 +37,24 @@
 
     // getPokemons()
 
-    async function getUsers(users) {
-      const promises = users.map(user => fetch(`https://api.github.com/users/${user}`).then(r => r.json()))
+    // async function getUsers(users) {
+    //   const promises = users.map(user => fetch(`https://api.github.com/users/${user}`).then(r => r.json()))
 
-      fetch('https://api.github.com/users/brunoromeiro').then(r => r.json())
+    //   fetch('https://api.github.com/users/brunoromeiro').then(r => r.json())
 
-      const people = await Promise.all(promises)
-      console.log(people.map(p => p.name))
-    }
+    //   const people = await Promise.all(promises)
+    //   console.log(people.map(p => p.name))
+    // }
 
-    getUsers(['brunoromeiro', 'dulcetti', 'willianjusten'])
+    // getUsers(['brunoromeiro', 'dulcetti', 'willianjusten'])
+
+
+
+    //String.prototype.padStart/padEnd
+    //.padEnd(tamanhoDesejado, textoParaAdicionar)
+    //.padStart(tamanhoDesejado, textoParaAdicionar)
+    console.log('1'.padStart(11, '0'))
+    console.log('1'.padEnd(11, '0'))
 
   </script>
 
