@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt_br">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>On Leave Intent Exemple Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  </head>
 
-  <body>
-    <script src="on-leave-intent.min.js"></script>
-    <script>
-      function dontLeaveMe() {
-        alert("Don't Leave me")
-        console.log('Saiu...')
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>On Leave Intent Exemple Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
 
-      const onLeaveIntent = new OnLeaveIntent(dontLeaveMe, 3000)
-    </script>
+<body>
+  <script src="../lib/on-leave-intent.min.js"></script>
+  <script>
+    function dontLeaveMe() {
+      alert("Don't Leave me")
+      console.log('Saiu...')
+    }
 
-    <h1>Espere 3 segundos para sair da página</h1>
-    <p>Espere...</p>
-  </body>
+    const onLeaveIntent = new OnLeaveIntent(dontLeaveMe, 3000)
+
+
+    // async function getPokemons() {
+
+    //   const response = await fetch('https://pokeapi.co/api/v2/pokemon')
+    //   const data = await response.json()
+
+    //   let res = data.results
+    //   return res.map(item => {
+    //     console.log(item.name)
+    //   })
+    // }
+
+    // getPokemons()
+
+  </script>
+
+  <h1>Espere 3 segundos para sair da página</h1>
+  <p>Espere...</p>
+</body>
+
 </html>
