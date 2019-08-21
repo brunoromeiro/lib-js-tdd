@@ -12,26 +12,30 @@
 <body>
   <script src="../lib/on-leave-intent.min.js"></script>
   <script>
-    function dontLeaveMe() {
-      alert("Don't Leave me")
-      console.log('Saiu...')
-    }
-
-    const onLeaveIntent = new OnLeaveIntent(dontLeaveMe, 3000)
-
-
-    // async function getPokemons() {
-
-    //   const response = await fetch('https://pokeapi.co/api/v2/pokemon')
-    //   const data = await response.json()
-
-    //   let res = data.results
-    //   return res.map(item => {
-    //     console.log(item.name)
-    //   })
+    // function dontLeaveMe() {
+    //   alert("Don't Leave me")
+    //   console.log('Saiu...')
     // }
 
-    // getPokemons()
+    // const onLeaveIntent = new OnLeaveIntent(dontLeaveMe, 3000)
+
+
+    async function getPokemons() {
+      try {
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon')
+        const data = await response.json()
+
+        let res = data.results
+        return res.map(item => {
+          console.log(item.name)
+        })
+
+      } catch (err) {
+        console.error('Noooooooooo, we got an error!', err);
+      }
+    }
+
+    getPokemons()
 
   </script>
 
