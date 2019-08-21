@@ -20,22 +20,33 @@
     // const onLeaveIntent = new OnLeaveIntent(dontLeaveMe, 3000)
 
 
-    async function getPokemons() {
-      try {
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon')
-        const data = await response.json()
+    // async function getPokemons() {
+    //   try {
+    //     const response = await fetch('https://pokeapi.co/api/v2/pokemon')
+    //     const data = await response.json()
 
-        let res = data.results
-        return res.map(item => {
-          console.log(item.name)
-        })
+    //     let res = data.results
+    //     return res.map(item => {
+    //       console.log(item.name)
+    //     })
 
-      } catch (err) {
-        console.error('Noooooooooo, we got an error!', err);
-      }
+    //   } catch (err) {
+    //     console.error('Noooooooooo, we got an error!', err);
+    //   }
+    // }
+
+    // getPokemons()
+
+    async function getUsers(users) {
+      const promises = users.map(user => fetch(`https://api.github.com/users/${user}`).then(r => r.json()))
+
+      fetch('https://api.github.com/users/brunoromeiro').then(r => r.json())
+
+      const people = await Promise.all(promises)
+      console.log(people.map(p => p.name))
     }
 
-    getPokemons()
+    getUsers(['brunoromeiro', 'dulcetti', 'willianjusten'])
 
   </script>
 
